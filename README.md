@@ -25,8 +25,10 @@ Postgresql 15
 1. Admin can add access for users to add/edit/delete in the Room Master and Room Booking modules.
 2. Admin can add access for users to the process/finish button in the Room Booking module.
 3. Room names in the Room Master cannot be duplicated.
-4. Booking names in the Room Booking cannot be duplicated and must use a sequence.
+   ![Room names](assets/validation_add_master_ruangan.png)
+4. Booking names in the Room Booking cannot be duplicated because use a sequence.
 5. A room that is booked cannot be booked by another customer.
+   ![Room booked](assets/validation_pemesanan_ruangan.png)
 
 ## Result
 1. Master Ruangan
