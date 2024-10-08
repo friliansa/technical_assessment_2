@@ -15,20 +15,11 @@ Postgresql 15
 5. run command: "odoo14_venv\Scripts\activate" (activate virtual env)
 6. run command: "python -m pip install --upgrade pip" (install pip)
 7. run command: "pip install -r odoo14\requirements.txt" (install requirement odoo 14 from odoo repo, Please check the manually installed requirements against the requirements listed in odoo14/requirements.txt)
-8. create file "odoo14.conf" and fill with the config, ex:
-    [options]
-    admin_passwd = superadmin
-    db_host = localhost
-    db_port = 5432
-    db_name = tunas_2024
-    db_user = odoo
-    db_password = odoo123
-    addons_path = odoo14\addons, custom_addons
-    xmlrpc_port = 8070
-9. run command: "python odoo14\odoo-bin -c odoo14.conf -u all" (init running odoo)
-10. open Apps menu in odoo and search 'room_booking'
+8. run command: "python odoo14\odoo-bin -c custom_addons/odoo14.conf -u all" (init running odoo)
+9. open Apps menu in odoo and search 'room_booking'
    ![Install Module](assets/install_module_room_booking.png)
-11. The module is installed successfully.
+10. The module is installed successfully
+11. Now, You can add record
 
 ## Features
 1. Admin can add access for users to add/edit/delete in the Room Master and Room Booking modules.
