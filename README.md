@@ -18,7 +18,7 @@ Repository ini merupakan jawaban dari Technical Assessment 2
 7. run command: "pip install -r odoo14\requirements.txt" (install requirement odoo 14 from odoo repo, Please check the manually installed requirements against the requirements listed in odoo14/requirements.txt)
 8. run command: "python odoo14\odoo-bin -c custom_addons/odoo14.conf -u all" (init running odoo)
 9. Open "http://127.0.0.1:8070/" in browser and Login with default credential, email: admin & password: admin
-10. open Apps menu in odoo and search 'room_booking'
+10. open Apps menu in odoo and search 'room_booking' and click "install"
    ![Install Module](assets/install_module_room_booking.png)
 11. The module is installed successfully
 12. Setup access user
