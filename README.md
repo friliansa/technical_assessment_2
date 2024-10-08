@@ -16,12 +16,13 @@ Repository ini merupakan jawaban dari Technical Assessment 2
 6. run command: "python -m pip install --upgrade pip" (install pip)
 7. run command: "pip install -r odoo14\requirements.txt" (install requirement odoo 14 from odoo repo, Please check the manually installed requirements against the requirements listed in odoo14/requirements.txt)
 8. run command: "python odoo14\odoo-bin -c custom_addons/odoo14.conf -u all" (init running odoo)
-9. open Apps menu in odoo and search 'room_booking'
+9. Login with default credential, email: admin & password: admin
+10. open Apps menu in odoo and search 'room_booking'
    ![Install Module](assets/install_module_room_booking.png)
-10. The module is installed successfully
-11. Setup access user
+11. The module is installed successfully
+12. Setup access user
    ![Setup access Module](assets/setup_access.png)
-12. Now, You can add record
+13. Now, You can add record
 
 ## Features
 1. Admin can add access for users to add/edit/delete in the Room Master and Room Booking modules.
