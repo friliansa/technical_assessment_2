@@ -19,7 +19,9 @@ Repository ini merupakan jawaban dari Technical Assessment 2
 9. open Apps menu in odoo and search 'room_booking'
    ![Install Module](assets/install_module_room_booking.png)
 10. The module is installed successfully
-11. Now, You can add record
+11. Setup access user
+   ![Setup access Module](assets/setup_access.png)
+12. Now, You can add record
 
 ## Features
 1. Admin can add access for users to add/edit/delete in the Room Master and Room Booking modules.
