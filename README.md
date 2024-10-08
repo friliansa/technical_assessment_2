@@ -2,10 +2,10 @@
 Repository ini merupakan jawaban dari Technical Assessment 2
 
 ## Requirements used
-OS windows
-Python 3.10.11
-pip 23.0.1
-Postgresql 15
+1. OS windows
+2. Python 3.10.11
+3. pip 23.0.1
+4. Postgresql 15
 
 ## Installation
 1. Move to the directory where you would like to perform the installation
