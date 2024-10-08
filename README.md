@@ -6,6 +6,7 @@ Repository ini merupakan jawaban dari Technical Assessment 2
 2. Python 3.10.11
 3. pip 23.0.1
 4. Postgresql 15
+5. Odoo version 14
 
 ## Installation
 1. Move to the directory where you would like to perform the installation
