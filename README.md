@@ -10,7 +10,7 @@ Postgresql 15
 ## Installation
 1. Move to the directory where you would like to perform the installation
 2. run command: "git clone https://www.github.com/odoo/odoo --depth 1 --branch 14.0 --single-branch odoo14" (clone base odoo 14)
-3. run command: "git clone https://github.com/friliansa/technical_assessment_2 custom_addons" (clone this repo for custom_addons)
+3. run command: "git clone https://github.com/friliansa/technical_assessment_2 custom_addons" (clone this repo for custom_addons directory name)
 4. run command: "python -m venv odoo14_venv" (create virtual env)
 5. run command: "odoo14_venv\Scripts\activate" (activate virtual env)
 6. run command: "python -m pip install --upgrade pip" (install pip)
