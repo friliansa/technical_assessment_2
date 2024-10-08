@@ -39,6 +39,7 @@ Repository ini merupakan jawaban dari Technical Assessment 2
    ![List Ruangan](assets/list_ruangan.png)
    ![Grid Ruangan](assets/grid_ruangan.png)
    ![Form Ruangan](assets/form_ruangan.png)
+   
 2. Pemesanan
    ![List Pemesanan](assets/list_pemesanan.png)
    ![Form Pemesanan](assets/form_pemesanan.png)
