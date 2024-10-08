@@ -13,7 +13,7 @@ class RoomBookingOrder(models.Model):
         ('Promo', 'Promo')
     ], string='Tipe Pemesanan', required=True)
     room_id = fields.Many2one('master.room', 'Ruangan', ondelete='restrict', required=True)
-    customer_name = fields.Char(string='Nama Pemesanan', required=True)
+    booking_name = fields.Char(string='Nama Pemesanan', required=True)
     date = fields.Date(string='Tanggal Pemesanan', required=True)
     state = fields.Selection([
         ('Draft', 'Draft'),
@@ -21,6 +21,14 @@ class RoomBookingOrder(models.Model):
         ('Done', 'Done')
     ], default='Draft', string='Status Pemesanan', required=True)
     note = fields.Char(string='Keterangan')
+
+    # Untuk memastikan tidak ada nama pemesanan yang sama
+    @api.constrains('booking_name')
+    def _check_booking_name(self):
+        for record in self:
+            existing_book = self.env['room.booking.order'].search([('booking_name', '=', record.booking_name), ('id', '!=', record.id)])
+            if existing_book:
+                raise ValidationError(f"Pemesanan dengan nama '{record.booking_name}' sudah ditambahkan. Silakan gunakan nama pemesanan yang berbeda.")
 
     # Untuk memastikan tidak memesan ruangan dan tanggal pemesanan yang sama
     @api.constrains('room_id', 'date')
