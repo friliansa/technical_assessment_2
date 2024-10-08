@@ -1,4 +1,4 @@
-# technical_assessment_2
+# Technical Assessment 2
 Repository ini merupakan jawaban dari Technical Assessment 2
 
 ## Requirements used
