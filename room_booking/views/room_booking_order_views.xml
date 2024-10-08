@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Treeview Pemesanan Ruangan -->
+    <record id="view_room_booking_order_tree" model="ir.ui.view">
+        <field name="name">room.booking.order.tree</field>
+        <field name="model">room.booking.order</field>
+        <field name="arch" type="xml">
+            <tree string="Pemesanan Ruangan" default_order="date desc">
+                <field name="name"/>
+                <field name="type"/>
+                <field name="room_id"/>
+                <field name="customer_name"/>
+                <field name="date"/>
+                <field name="note"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form Pemesanan Ruangan -->
+    <record id="view_room_booking_order_form" model="ir.ui.view">
+        <field name="name">room.booking.order.form</field>
+        <field name="model">room.booking.order</field>
+        <field name="arch" type="xml">
+            <form string="Pemesanan Ruangan">
+                <header>
+                    <button name="action_process" groups="room_booking.room_booking_order_group_process" type="object" string="Proses" class="btn-primary" states="Draft"/>
+                    <button name="action_finish" groups="room_booking.room_booking_order_group_finish" type="object" string="Selesai" class="btn-primary" states="On Going"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="type" attrs="{'readonly': [('state', '!=', 'Draft')]}"/>
+                        <field name="room_id" attrs="{'readonly': [('state', '!=', 'Draft')]}"/>
+                        <field name="customer_name" attrs="{'readonly': [('state', '!=', 'Draft')]}"/>
+                        <field name="date" attrs="{'readonly': [('state', '!=', 'Draft')]}"/>
+                        <field name="note" attrs="{'readonly': [('state', '=', 'Done')]}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search Pemesanan Ruangan -->
+    <record id="view_room_booking_order_search" model="ir.ui.view">
+        <field name="name">room.booking.order.search</field>
+        <field name="model">room.booking.order</field>
+        <field name="arch" type="xml">
+            <search string="Search Pemesanan Ruangan">
+                <field name="name"/>
+                <filter name="group_year" string="Tahun" context="{'group_by':'date:year'}"/>
+                <filter name="group_month" string="Bulan" context="{'group_by':'date:month'}"/>
+                <filter name="group_state" string="Status" context="{'group_by':'state'}"/>
+            </search>
+        </field>
+    </record>
+
+    
+    <record id="action_room_booking_order" model="ir.actions.act_window">
+        <field name="name">Pemesanan Ruangan</field>
+        <field name="res_model">room.booking.order</field>
+        <field name="view_mode">tree,form,search</field>    
+        <field name="context">
+            {'search_default_group_year': 1, 
+            'search_default_group_month': 1, 
+            'search_default_group_state': 1}
+        </field>
+    </record>
+
+</odoo>

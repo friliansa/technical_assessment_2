@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="pemesanan_ruang" name="Ruangan" sequence="0"/>
+    <menuitem id="pemesanan_ruang_master_room" name="Master Ruangan" parent="pemesanan_ruang" action="action_master_room" sequence="0"/>
+    <menuitem id="pemesanan_ruang_room_booking_order" name="Pemesanan Ruangan" parent="pemesanan_ruang" action="action_room_booking_order" sequence="1"/>
+</odoo>

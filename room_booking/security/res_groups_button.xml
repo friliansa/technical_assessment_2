@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="0">
+
+    <!-- Room Booking Order Process Groups-->
+        <record id="room_booking_order_group_process" model="res.groups">
+            <field name="category_id" ref="room_booking.room_booking"/>
+            <field name="name">Booking Room Room Booking Order Process Button</field>
+            <field name="menu_access" eval="[(4, ref('pemesanan_ruang_room_booking_order'))]"/>
+        </record> 
+        <record id="access_room_booking_order_group_process" model="ir.model.access">
+            <field name="model_id" ref="model_room_booking_order"/>
+            <field name="name">room_booking_order_group process</field> 
+            <field name="group_id" ref="room_booking_order_group_process"/>  
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+        </record> 
+    <!-- Room Booking Order Finish Groups-->
+        <record id="room_booking_order_group_finish" model="res.groups">
+            <field name="category_id" ref="room_booking.room_booking"/>
+            <field name="name">Booking Room Room Booking Order Finish Button</field>
+            <field name="menu_access" eval="[(4, ref('pemesanan_ruang_room_booking_order'))]"/>
+        </record> 
+        <record id="access_room_booking_order_group_finish" model="ir.model.access">
+            <field name="model_id" ref="model_room_booking_order"/>
+            <field name="name">room_booking_order_group finish</field> 
+            <field name="group_id" ref="room_booking_order_group_finish"/>  
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+        </record> 
+
+
+    <!-- Assign groups to System Admin Booking Room -->
+        <record id="room_booking.group_sys_admin_room_booking" model="res.groups">
+            <field name="implied_ids" eval="[
+                (4,ref('room_booking_order_group_process')),
+                (4,ref('room_booking_order_group_finish')),
+            ]"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Kanban View Master Room-->
+    <record id="view_master_room_kanban" model="ir.ui.view">
+        <field name="name">master.room.kanban</field>
+        <field name="model">master.room</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_view">
+                <field name="name"/>
+                <field name="type"/>
+                <field name="location"/>
+                <field name="capacity"/>
+                <field name="note"/>
+                <field name="image_preview"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click" style="text-align: left; padding: 10px;">
+                            <div class="text-center">
+                                <field name="image_preview" widget="image" readonly="1" string="Foto Ruangan"/>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <span>Nama: <field name="name"/></span><br/>
+                                <span>Tipe: <field name="type"/></span><br/>
+                                <span>Lokasi: <field name="location"/></span><br/>
+                                <span>Kapasitas: <field name="capacity"/></span><br/>
+                                <span>Catatan: <field name="note"/></span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Treeview Master Room -->
+    <record id="view_master_room_tree" model="ir.ui.view">
+        <field name="name">master.room.tree</field>
+        <field name="model">master.room</field>
+        <field name="arch" type="xml">
+            <tree string="Master Ruangan">
+                <field name="name"/>
+                <field name="type"/>
+                <field name="location"/>
+                <field name="capacity"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View Master Room -->
+    <record id="view_master_room_form" model="ir.ui.view">
+        <field name="name">master.room.form</field>
+        <field name="model">master.room</field>
+        <field name="arch" type="xml">
+            <form string="Master Ruangan">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="location"/>
+                        <field name="image_preview" widget="image" readonly="1" string="Foto Ruangan"/>
+                        <field name="file" filename="filename"/>
+                        <field name="capacity"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    
+    <record id="action_master_room" model="ir.actions.act_window">
+        <field name="name">Master Ruangan</field>
+        <field name="res_model">master.room</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+</odoo>
