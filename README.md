@@ -30,7 +30,8 @@ Repository ini merupakan jawaban dari Technical Assessment 2
 2. Admin can add access for users to the process/finish button in the Room Booking module.
 3. Room names in the Room Master cannot be duplicated.
    ![Room names](assets/validation_add_master_ruangan.png)
-4. Booking names in the Room Booking cannot be duplicated because use a sequence.
+4. Booking names in the Room Booking cannot be duplicated.
+   ![Booking names](assets/validation_nama_pemesanan.png)
 5. A room that is booked cannot be booked by another customer.
    ![Room booked](assets/validation_pemesanan_ruangan.png)
 
@@ -39,7 +40,7 @@ Repository ini merupakan jawaban dari Technical Assessment 2
    ![List Ruangan](assets/list_ruangan.png)
    ![Grid Ruangan](assets/grid_ruangan.png)
    ![Form Ruangan](assets/form_ruangan.png)
-   
+
 2. Pemesanan
    ![List Pemesanan](assets/list_pemesanan.png)
    ![Form Pemesanan](assets/form_pemesanan.png)
