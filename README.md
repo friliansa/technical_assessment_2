@@ -29,7 +29,9 @@ Postgresql 15
 5. A room that is booked cannot be booked by another customer.
 
 ## Result
+1. Master Ruangan
    ![List Ruangan](assets/list_ruangan.png)
    ![Grid Ruangan](assets/grid_ruangan.png)
+2. Pemesanan
    ![List Pemesanan](assets/list_pemesanan.png)
 
