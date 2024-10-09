@@ -14,7 +14,7 @@ Repository ini merupakan jawaban dari Technical Assessment 2
 3. run command: "git clone https://github.com/friliansa/technical_assessment_2 custom_addons" (clone this repo for custom_addons directory name)
 4. run command: "python -m venv odoo14_venv" (create virtual env)
 5. run command: "odoo14_venv\Scripts\activate" (activate virtual env)
-6. run command: "python -m pip install --upgrade pip" (install pip)
+6. run command: "python -m pip install --upgrade pip" (install latest pip)
 7. run command: "pip install -r odoo14\requirements.txt" (install requirement odoo 14 from odoo repo, Please check the manually installed requirements against the requirements listed in odoo14/requirements.txt)
 8. run command: "python odoo14\odoo-bin -c custom_addons/odoo14.conf -u all" (init running odoo)
 9. Open "http://127.0.0.1:8070/" in browser and Login with default credential, email: admin & password: admin
